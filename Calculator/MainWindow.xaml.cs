@@ -27,7 +27,14 @@ namespace Calculator
 
         private void BtnSeven_Click(object sender, RoutedEventArgs e)
         {
-            lblResult.Content = "7";
+            if (lblResult.Content.Equals("0"))
+            {
+                lblResult.Content = "7";
+            }
+            else
+            {
+                lblResult.Content = $"{lblResult.Content}7";
+            }
         }
     }
 }
